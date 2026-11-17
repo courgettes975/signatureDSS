@@ -1,0 +1,12 @@
+/* Theme sombre SignatureDSS */
+.root { -fx-font-size: 13px; -fx-base: #2d333b; -fx-background: #1c2128; -fx-control-inner-background: #22272e; -fx-accent: #4493f8; -fx-focus-color: #4493f8; } /* couleurs de base */
+.label, .check-box, .titled-pane { -fx-text-fill: #e6edf3; } /* texte clair */
+.drop-zone { -fx-border-color: #768390; -fx-border-style: segments(6, 4); -fx-border-radius: 6; -fx-padding: 18; -fx-alignment: center; -fx-text-fill: #adbac7; } /* zone de depot */
+.button.primary { -fx-base: #347d39; -fx-text-fill: white; -fx-font-weight: bold; } /* bouton principal */
+.verdict { -fx-font-size: 18px; -fx-font-weight: bold; } /* verdict */
+.verdict.ok { -fx-text-fill: #57ab5a; } /* valide */
+.verdict.ko { -fx-text-fill: #e5534b; } /* invalide */
+.verdict.indetermine { -fx-text-fill: #c69026; } /* indetermine */
+.hint { -fx-text-fill: #c69026; } /* message */
+.status { -fx-background-color: #22272e; -fx-text-fill: #adbac7; } /* barre d'etat */
+.mono { -fx-font-family: "monospace"; -fx-font-size: 12px; } /* texte des rapports */
