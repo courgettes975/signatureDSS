@@ -1,0 +1,24 @@
+SignatureDSS - signature et validation eIDAS portables
+======================================================
+
+1. Copiez le dossier SignatureDSS sur une clé USB formatée en exFAT
+   (FAT32 refuse les fichiers de plus de 4 Go, par exemple les vidéos).
+
+2. Lancez l'application :
+   - Windows : Windows\SignatureDSS.exe
+   - macOS   : macOS\SignatureDSS.app
+               Premier lancement : clic droit > Ouvrir (application non signée par Apple).
+               Ne déplacez pas l'application hors du dossier macOS.
+               Si un message indique que "donnees" n'est pas accessible en écriture :
+                 xattr -dr com.apple.quarantine /Volumes/<nom de la clé>/SignatureDSS
+   - Linux   : Linux/bin/SignatureDSS
+
+3. Toutes les données (paramètres, listes de confiance, journaux) sont écrites
+   dans le dossier "donnees", à côté. Rien n'est écrit sur l'ordinateur.
+
+Jeton USB Feitian : le pilote du jeton doit être installé sur l'ordinateur
+utilisé. Indiquez sa bibliothèque PKCS#11 dans Paramètres.
+
+Diagnostic (Windows) : Windows\SignatureDSS-console.exe --self-check
+
+Documentation complète : docs/DOCUMENTATION.md dans le dépôt du projet.

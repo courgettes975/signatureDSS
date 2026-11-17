@@ -1,0 +1,21 @@
+Pilote PKCS#11 OpenSC embarqué
+==============================
+
+Fichier   : windows-x64/opensc-pkcs11.dll
+Projet    : OpenSC 0.27.1 (https://github.com/OpenSC/OpenSC), licence LGPL 2.1 (voir COPYING)
+Source    : https://github.com/OpenSC/OpenSC/releases/download/0.27.1/OpenSC-0.27.1_x64.msi
+            SHA-256 du MSI : 88ea45e848063ff5f3594a457b7f023223472eae9c9c543f8035f7689bb7b319
+            (identique à l'empreinte publiée par GitHub ; signature Authenticode valide, SignPath Foundation)
+Extraction: msiexec /a (extraction administrative, sans installation), fichier
+            PFiles64/OpenSC Project/OpenSC/pkcs11/opensc-pkcs11.dll
+SHA-256 de la DLL : 2bc5f9588a832d795b3b10cc403831501c97bb8396ff402f520182851f52bf1f
+
+Code source correspondant : https://github.com/OpenSC/OpenSC/archive/refs/tags/0.27.1.tar.gz
+
+Usage : jetons PIV (dont Feitian K49+/K50+), ePass2003 et autres cartes prises en charge par OpenSC.
+Le paquet Windows copie cette DLL dans Windows/pilotes/ ; l'application l'utilise par défaut
+si aucune bibliothèque PKCS#11 n'est choisie dans les Paramètres.
+
+macOS et Linux : OpenSC n'est pas embarqué ; l'application détecte une installation existante :
+  macOS  : /Library/OpenSC/lib/opensc-pkcs11.so ou /usr/local/lib/opensc-pkcs11.so (installeur OpenSC)
+  Debian : /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so (paquet opensc-pkcs11)
